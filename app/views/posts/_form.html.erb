@@ -11,11 +11,11 @@
     </div>
   <% end %>
 
-  <%= f.label "Name" %>
-  <%= f.text_field :name %> <br>
+  <%= f.label "Name:" %>
+  <%= f.text_field :name, id: "Name" %> <br>
 
   <%= f.label "Content:" %>
-  <%= f.text_area :content %> <br><br>
+  <%= f.text_area :content, id: "Content" %> <br><br>
 
   <%= f.label "Tags:" %>
   <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :name %>
@@ -25,8 +25,6 @@
 
   <br>
  
-
-
   <div class="actions">
     <%= f.submit %>
   </div>
